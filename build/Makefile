@@ -258,6 +258,33 @@ src/polygon.cpp.s:
 	$(MAKE) -f CMakeFiles/shapes.dir/build.make CMakeFiles/shapes.dir/src/polygon.cpp.s
 .PHONY : src/polygon.cpp.s
 
+src/quicksort.o: src/quicksort.cpp.o
+
+.PHONY : src/quicksort.o
+
+# target to build an object file
+src/quicksort.cpp.o:
+	$(MAKE) -f CMakeFiles/shapes.dir/build.make CMakeFiles/shapes.dir/src/quicksort.cpp.o
+.PHONY : src/quicksort.cpp.o
+
+src/quicksort.i: src/quicksort.cpp.i
+
+.PHONY : src/quicksort.i
+
+# target to preprocess a source file
+src/quicksort.cpp.i:
+	$(MAKE) -f CMakeFiles/shapes.dir/build.make CMakeFiles/shapes.dir/src/quicksort.cpp.i
+.PHONY : src/quicksort.cpp.i
+
+src/quicksort.s: src/quicksort.cpp.s
+
+.PHONY : src/quicksort.s
+
+# target to generate assembly for a file
+src/quicksort.cpp.s:
+	$(MAKE) -f CMakeFiles/shapes.dir/build.make CMakeFiles/shapes.dir/src/quicksort.cpp.s
+.PHONY : src/quicksort.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -282,6 +309,9 @@ help:
 	@echo "... src/polygon.o"
 	@echo "... src/polygon.i"
 	@echo "... src/polygon.s"
+	@echo "... src/quicksort.o"
+	@echo "... src/quicksort.i"
+	@echo "... src/quicksort.s"
 .PHONY : help
 
 
