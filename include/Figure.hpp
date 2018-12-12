@@ -18,6 +18,14 @@ class Figure {
   ~Figure();
   void addShape(Polygon *s);
   void getBoundingBox(Coordinate *topLeft, Coordinate *botRight);
+  int getClosest(Coordinate location, int n, Polygon *closestArr);
 };
+
+struct DistancePair {
+  int index;
+  float distance;
+};
+
+void quicksortFigure(DistancePair arr[], int low, int high);
 
 #endif

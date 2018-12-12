@@ -77,16 +77,17 @@ int main(int argc, char* argv[]) {
   }
 
   Figure everyShape(currentLine, shapes);
+  int n = 4;
 
-  //getBoundingBox uses these coordinates to return
-  Coordinate topLeft;
-  Coordinate botRight;
+  Polygon *closestShapes = new Polygon[n];
 
-  everyShape.getBoundingBox(&topLeft, &botRight);
+  int numberOfClosestShapesFound = everyShape.getClosest(shapes[0].position(), n, closestShapes);
 
-  std::cout << "Bounding box top left coordinate: " << topLeft;
-  std::cout << "Bounding box bottom right coordinate: " << botRight;
-
+  std::cout << "Found " << numberOfClosestShapesFound << " close shapes out of " << n << " requested: " << std::endl;
+  for(int i = 0; i < numberOfClosestShapesFound; i++) {
+    std::cout << closestShapes[i];
+  }
+  delete [] closestShapes;
   delete [] shapes;
 
   readFile.close();
